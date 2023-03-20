@@ -1,7 +1,7 @@
 import css from "./Filter.module.css";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { filterContacts } from "../../redux/filterSlice";
-import { getFilterValue } from "../../redux/selectors";
+
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -9,8 +9,6 @@ export const Filter = () => {
     dispatch(filterContacts(e.target.value));
   };
 
-  // const filter = useSelector(getFilterValue);
-  // console.log(filter)
 
   return (
     <label className={css.label}>
